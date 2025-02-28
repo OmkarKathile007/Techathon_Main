@@ -33,7 +33,7 @@ function Navbar() {
         </div>
 
         <div className="hidden md:flex list-none gap-6 text-red items-center">
-          <Link href="/statistic" className="hover:text-orange-500">
+          <Link href="/statistics" className="hover:text-orange-500">
             Statistics
           </Link>
 

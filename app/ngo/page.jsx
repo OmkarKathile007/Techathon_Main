@@ -179,7 +179,7 @@ const NGOTab = () => {
                             : "View Details"}
                         </button>
                         <button
-                          className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all"
+                          className="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-900 transition-all"
                           onClick={() =>
                             window.open(
                               `https://www.google.com/maps?q=${donor.location.coordinates.latitude},${donor.location.coordinates.longitude}`
@@ -187,6 +187,9 @@ const NGOTab = () => {
                           }
                         >
                           View Direction
+                        </button>
+                        <button className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all">
+                          Accept
                         </button>
                       </div>
                     </div>
