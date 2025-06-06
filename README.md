@@ -61,13 +61,11 @@ Through an intuitive interface, donors can upload surplus food details (includin
 - **Frontend**  
   - [Next.js](https://nextjs.org/) (React framework)  
   - [Tailwind CSS](https://tailwindcss.com/) (Utility-first styling)  
-  - [Socket.IO](https://socket.io/) (Real-time communication)  
-  - [next-auth](https://next-auth.js.org/) (Authentication)
+
 
 - **Backend (Node.js / Express.js)**  
   - [Node.js](https://nodejs.org/) (JavaScript runtime)  
-  - [Express.js](https://expressjs.com/) (Web framework)  
-  - [Socket.IO](https://socket.io/) (WebSockets)  
+  - [Express.js](https://expressjs.com/) (Web framework)  )  
   - [Mongoose](https://mongoosejs.com/) (MongoDB ODM)
 
 - **Deep Learning**  
@@ -82,10 +80,6 @@ Through an intuitive interface, donors can upload surplus food details (includin
   - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) (Cloud database)  
   - Local file storage (for temporary image uploads)  
 
-- **Deployment & Hosting**  
-  - [Vercel](https://vercel.com/) (Next.js frontend)  
-  - [Heroku / DigitalOcean](https://www.digitalocean.com/) (Node.js backend + Python service)  
-  - Docker (Containerization for the Python inference service)
 
 ---
 
@@ -123,9 +117,6 @@ Below is the high-level directory layout for the SurplusShift repository:
 │   │   └── predict.py         # Inference logic (loading weights, returning labels)
 │   │
 │   ├── routes/                # Express.js route definitions (donations, users, chat)
-│   ├── controllers/           # Request handler functions (business logic)
-│   ├── middlewares/           # Auth guards, error handlers, logging
-│   ├── services/              # Chatbot integration (IBM Watson), image-upload utility
 │   ├── utils/                 # Helper functions (token generation, validation)
 │   ├── server.js              # Express.js server setup & Socket.IO integration
 │   ├── package.json           # Backend dependencies & scripts
