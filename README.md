@@ -19,7 +19,7 @@
 10. [Contact](#contact)
 
 ---
-### SurplusShift (Hackathon Project) | Team: Rohit Pal, Saurabh Magar, Onkar Sarambale, Omkar Kathile
+### SurplusShift (Hackathon Project) | Team:Omkar Kathile, Rohit Pal, Saurabh Magar, Onkar Sarambale
 ## Overview
 
 **SurplusShift** is a real-time platform designed to connect surplus food donors with local NGOs and volunteers. The primary goal is to reduce food waste, fight hunger, and build sustainable communities by streamlining the donation process. SurplusShift leverages modern web technologies (Next.js, Node.js, Express.js, MongoDB) alongside deep learning for image classification and IBM Watson Assistant for conversational support.  
