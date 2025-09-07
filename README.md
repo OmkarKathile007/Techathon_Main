@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FOOD PLATFORM
+SurplusShift is a real-time platform designed to connect surplus food donors with local NGOs and volunteers. The primary goal is to reduce food waste, fight hunger, and build sustainable communities by streamlining the donation process. SurplusShift leverages modern web alongside deep learning for image classification and IBM Watson Assistant for conversational support.
 
-## Getting Started
+Through an intuitive interface, donors can upload surplus food details (including images), which are automatically classified to ensure accurate categorization. NGOs and volunteers can then claim, schedule pickups, and track donations in real time — reducing manual overhead and maximizing efficiency.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Rescue Food, Nourish Communities**  
+A real-time platform connecting surplus food donors with local NGOs and volunteers. SurplusShift reduces food waste, fights hunger, and helps build sustainable communities.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Features  
 
-## Learn More
+- 📦 **Food Donation Management** – Donors can upload surplus food details with images.  
+- 🤖 **AI-Powered Classification** – Deep learning models automatically categorize food items for accuracy.  
+- 🏢 **NGO & Volunteer Matching** – Real-time matching of donations with NGOs and volunteers.  
+- 🗓️ **Pickup Scheduling** – NGOs/volunteers can claim donations and schedule pickups.  
+- 📊 **Donation Tracking** – Track donations, availability, and delivery in real time.  
+- 💬 **Conversational Support** – IBM Watson Assistant provides a chatbot for guidance.  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tech Stack  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Frontend**: Next.js , TailwindCSS  
+- **Backend**: Spring Boot / Flask (for ML services)  
+- **Database**: MongoDB  
+- **AI/ML**:  
+  - Deep Learning for Image Classification (PyTorch / TensorFlow)  
+  - IBM Watson Assistant for conversational AI  
+ 
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📷 Screenshots  
+
+
+![Homepage](public/images/landingpage.png) 
+
+## Donor Tab
+ ![Dashboard](public/images/donortab.png)  
+
+## Ngo Tab
+![Chatbot](public/images/ngotab.png) |
+
+
+  
+
+
