@@ -27,7 +27,7 @@ function Home() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen w-full flex flex-col p-16 pb-8 lg:pb-12">
+      <main className="min-h-screen bg-orange-50 w-full flex flex-col p-16 pb-8 lg:pb-12">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

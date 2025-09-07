@@ -5,6 +5,7 @@ import torchvision.transforms as transforms
 from PIL import Image
 from torchvision import models
 import torch.nn as nn
+import os
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
@@ -15,13 +16,18 @@ CORS(app)  # Enable CORS for all routes
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # ---------------------------
+# Base Path (project backend/python)
+# ---------------------------
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# ---------------------------
 # Binary Food Detection Model (Food vs. Non-Food)
 # ---------------------------
-# Using weights=None to suppress deprecation warnings
 binary_model = models.resnet50(weights=None)
 num_ftrs_binary = binary_model.fc.in_features
 binary_model.fc = nn.Linear(num_ftrs_binary, 2)
-binary_model_path = r"C:/Users/saura/OneDrive/Desktop/PROJECT/Techathon/my-app/backend/python/py/binary_food_detection.pth"
+
+binary_model_path = os.path.join(BASE_DIR, "py", "binary_food_detection.pth")
 binary_model.load_state_dict(torch.load(binary_model_path, map_location=device))
 binary_model.to(device)
 binary_model.eval()
@@ -47,7 +53,8 @@ food_labels = [
 food_model = models.resnet50(weights=None)
 num_ftrs_food = food_model.fc.in_features
 food_model.fc = nn.Linear(num_ftrs_food, 80)  # Output dimension matches number of labels (80)
-food_model_path = r"C:/Users/saura/OneDrive/Desktop/PROJECT/Techathon/my-app/backend/python/py/indian_food_resnet50.pth"
+
+food_model_path = os.path.join(BASE_DIR, "py", "indian_food_resnet50.pth")
 food_model.load_state_dict(torch.load(food_model_path, map_location=device), strict=False)
 food_model.to(device)
 food_model.eval()
@@ -70,7 +77,6 @@ def predict_binary(image):
     with torch.no_grad():
         output = binary_model(img_tensor)
         _, predicted = torch.max(output, 1)
-    # Assuming class 0 means Food and class 1 means Non-Food
     return "Food" if predicted.item() == 0 else "Non-Food"
 
 def predict_food_type(image):
@@ -102,7 +108,6 @@ def api_predict():
     except Exception:
         return jsonify({"error": "Invalid image format"}), 400
 
-    # First, check if the image is food
     binary_result = predict_binary(image)
     if binary_result == "Food":
         food_name = predict_food_type(image)
@@ -117,4 +122,4 @@ def api_predict():
         })
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,port=5010)

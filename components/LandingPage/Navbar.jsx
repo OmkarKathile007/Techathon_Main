@@ -15,7 +15,7 @@ function Navbar() {
   };
 
   return (
-    <div className="z-50 bg-white text-black w-full shadow-[0_10px_80px_-30px_rgba(0,0,0,0.2)] shadow-black  border-gray-300">
+    <div className="z-50 fixed bg-white text-black w-full shadow-[0_10px_80px_-30px_rgba(0,0,0,0.2)] shadow-black  border-gray-300">
       <div className="flex items-center justify-between p-4 w-full h-full">
         <div className="flex items-center">
           {/* <h1 className="text-3xl md:text-4xl  font-bold ml-2 ">
@@ -24,7 +24,7 @@ function Navbar() {
           {/* <Image src={LogoPng} alt="food logo"  className="w-[200px]" /> */}
           <div className="flex flex-col items-center justify-center  ">
             <h1
-              className={`font-extrabold text-orange-400 text-4xl tracking-wide `}
+              className={`font-semibold text-orange-400 text-4xl tracking-wide `}
             >
               SurplusShift
             </h1>

@@ -22,7 +22,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = models.resnet50(weights=None)
 num_ftrs = model.fc.in_features
 model.fc = torch.nn.Linear(num_ftrs, 80)  # Match trained model output
-model.load_state_dict(torch.load(C:\Users\saura\OneDrive\Desktop\ha\Techathon\my-app\backend\python\py\indian_food_resnet50.pth, map_location=device), strict=False)
+model.load_state_dict(torch.load('C:\Users\saura\OneDrive\Desktop\ha\Techathon\my-app\backend\python\py\indian_food_resnet50.pth', map_location=device), strict=False)
 model.to(device)
 model.eval()
 
@@ -49,7 +49,7 @@ def predict_image(image_path):
         else:
             return "Unknown Food"
 
-# Test prediction
-image_path = r"C:/Users/Onkar/OneDrive/Pictures/poha AISSMS.jpg"
+# Test prediction  "C:\Users\Asus\Downloads\poha.jpg"
+image_path = r"C:/Users/Asus/Downloads/poha.jpg"
 result = predict_image(image_path)
 print(f"🍽️ Predicted Food Name: {result}")

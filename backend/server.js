@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 
-const mongoURI =  'mongodb+srv://magarsaurabh59:KGgEB4izM7PRapuo@cluster0.lq6uf.mongodb.net/';
+const mongoURI =  'mongodb+srv://zken06231:nOwSjfE3nhAeJnUT@cluster0.qxxtvne.mongodb.net/';
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

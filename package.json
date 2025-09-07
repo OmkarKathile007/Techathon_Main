@@ -30,8 +30,10 @@
     "multer-gridfs-storage": "^1.3.0",
     "next": "15.1.7",
     "react": "^19.0.0",
+    "react-countup": "^6.5.3",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
+    "react-intersection-observer": "^9.16.0",
     "recharts": "^2.15.1",
     "tailwind-variants": "^0.3.1"
   },

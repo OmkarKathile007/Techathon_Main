@@ -29,7 +29,7 @@ def predict(image_path):
 
     return "Food" if predicted.item() == 0 else "Non-Food"
 
-# Example
-image_path = r"C:/Users/Onkar/OneDrive/Pictures/poha AISSMS.jpg"
+# Example C:\Users\Asus\Downloads\poha.jpg
+image_path = r"C:/Users/Asus/Downloads/poha.jpg"
 result = predict(image_path)
 print("Prediction:", result)
